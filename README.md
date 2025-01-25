@@ -59,3 +59,16 @@ Module 4 led 7 đoạn của chúng ta gồm 4 ic hc595 xếp tầng theo sơ đ
 ![schematic_4hc595_daisy_chained](./images/schematic_4hc595_daisy_chained.jpg)
 
 Như vậy để điều khiển 4 led, ta cần gửi cả 32 bit dữ liệu rồi mới kéo chân RCLK lên mức cao để chốt dữ liệu.
+
+## V. Thiết kế các khối chức năng
+
+Chương trình gồm 4 khối chức năng chính:
+1. Khối **clk_divider**: chia clk 100 MHz của ZUBoard thành clk 10 Hz (100 ms).
+2. Khối **digits**: nhận clk đầu vào 10 MHz, đầu ra là 4 chữ số **dig_0**, **dig_1**, **dig_2**, **dig_3** dưới dạng số thập phân. Các số này đếm từ 0 -> 9999, tăng lên mỗi 100 ms.
+3. Khối **bcd_to_led7seg**: gồm 4 bản sao. Mỗi khối nhận đầu vào là 1 chữ số từ khối **digits**, chuyển nó sang dạng mã hóa led 7 đoạn.
+4. Khối **gen_eninput_pulse**: tạo xung **en_input** kích hoạt khối **hc595_driver** hoạt động.
+5. Khối **hc595_driver**: nhận đầu vào là 32 bit dữ liệu mã hóa 4 chữ số dạng led 7 đoạn. Tạo các tín hiệu giao tiếp với module 4 hc595 xếp tầng điều khiển 4 led 7 đoạn.
+
+![schematic_top](./images/shcematic_top.png)
+
+

@@ -21,19 +21,19 @@ https://github.com/user-attachments/assets/e14f3003-0783-4027-b96c-c62e5e2e1b5a
 - 3 đường dây tín hiệu SRCLK, RCLK và SER; dây VCC +5V; dây GND.
 
 Trên thị trường có 4 loại module led7seg 4 số thông dụng, tương ứng mỗi loại thì giao tiếp với Verilog cũng khác nhau:
-1. Led 7 đoạn đơn thuần (common cathode hoặc common anode).
+1. Led 7 đoạn đơn thuần (common cathode hoặc common anode). Cần đến 12 chân giao tiếp.
    
 ![4led7seg_no_ic](./images/4led7seg_no_ic.jpg)
 
-2. Led 7 đoạn tích hợp ic TM1637.
+2. Led 7 đoạn tích hợp ic TM1637. Dùng 2 chân giao tiếp CLK và DIO
    
 ![4led7seg_tm1637](./images/4led7seg_tm1637.jpg)
 
-3. Led 7 đoạn tích hợp 2 ic HC595.
+3. Led 7 đoạn tích hợp 2 ic HC595. Dùng 3 chân giao tiếp SRCLK, RCLK, SER.
    
 ![4led7seg_2hc595](./images/4led7seg_2hc595.jpg)
 
-4. Led 7 đoạn tích hợp 4 ic HC595.
+4. Led 7 đoạn tích hợp 4 ic HC595. Dùng 3 chân giao tiếp SRCLK, RCLK, SER.
    
 ![4led7seg_4hc595](./images/4led7seg_4hc595.jpg)
 

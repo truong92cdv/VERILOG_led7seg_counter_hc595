@@ -56,4 +56,4 @@ Module 4 led 7 đoạn của chúng ta gồm 4 ic hc595 xếp tầng theo sơ đ
 
 ![schematic_4hc595_daisy_chained](./images/schematic_4hc595_daisy_chained.jpg)
 
-
+Như vậy để điều khiển 4 led, ta cần gửi cả 32 bit dữ liệu rồi mới kéo chân RCLK lên mức cao để chốt dữ liệu.

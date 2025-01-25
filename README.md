@@ -69,6 +69,6 @@ Chương trình gồm 4 khối chức năng chính:
 4. Khối **gen_eninput_pulse**: tạo xung **en_input** kích hoạt khối **hc595_driver** hoạt động.
 5. Khối **hc595_driver**: nhận đầu vào là 32 bit dữ liệu mã hóa 4 chữ số dạng led 7 đoạn. Tạo các tín hiệu giao tiếp với module 4 hc595 xếp tầng điều khiển 4 led 7 đoạn.
 
-![schematic_top](./images/shcematic_top.png)
+![schematic_top](./images/schematic_top.png)
 
 

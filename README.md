@@ -46,8 +46,14 @@ HC595 là 1 ic thanh ghi dịch 8 bit. Đọc thêm về hc595 tại đây [HC59
 
 Dữ liệu được gửi đến hc595 theo từng bit tại mỗi cạnh lên xung clk. Khi đã gửi đủ 8 bit, kéo chân RCLK (hoặc ST_CP) lên mức cao để chốt dữ liệu đến đầu ra Q0 -> Q7 (hoặc QA -> QH).
 
-Một ưu điểm của hc595 là nó có thể xếp tầng để điều khiển hơn 8 đầu ra, bằng cách kết nối chân Q7' của ic phía trước với chân SER của ic phía sau.
+Một ưu điểm của hc595 là nó có thể xếp tầng để điều khiển hơn 8 đầu ra, bằng cách kết nối chân Q7' (hoặc QH') của ic phía trước với chân SER của ic phía sau.
 
 Sơ đồ cấu tạo của HC595 như sau:
 
 ![schematic_hc595](./images/schematic_hc595.webp)
+
+Module 4 led 7 đoạn của chúng ta gồm 4 ic hc595 xếp tầng theo sơ đồ sau:
+
+![schematic_4hc595_daisy_chained](./images/schematic_4hc595_daisy_chained.jpg)
+
+

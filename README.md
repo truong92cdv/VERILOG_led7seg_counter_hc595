@@ -29,11 +29,11 @@ Trên thị trường có 4 loại module led7seg 4 số thông dụng, tương 
    
 ![4led7seg_tm1637](./images/4led7seg_tm1637.jpg)
 
-3. Led 7 đoạn tích hợp 2 ic HC595. Dùng 3 chân giao tiếp SRCLK, RCLK, SER.
+3. Led 7 đoạn tích hợp 2 ic HC595. 1 ic điều khiển các đoạn led A->DP, 1 ic để chọn led. Dùng 3 chân giao tiếp SRCLK, RCLK, SER.
    
 ![4led7seg_2hc595](./images/4led7seg_2hc595.jpg)
 
-4. Led 7 đoạn tích hợp 4 ic HC595. Dùng 3 chân giao tiếp SRCLK, RCLK, SER.
+4. Led 7 đoạn tích hợp 4 ic HC595. Mỗi ic điều khiển 1 led riêng biệt. Dùng 3 chân giao tiếp SRCLK, RCLK, SER.
    
 ![4led7seg_4hc595](./images/4led7seg_4hc595.jpg)
 

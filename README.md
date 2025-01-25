@@ -14,6 +14,11 @@ Thiết kế bộ đếm 4 led 7 đoạn (0-9999). Giao tiếp Verilog qua ic th
 
 ![demo_project](./images/demo_project.mp4)
 
+
+https://github.com/user-attachments/assets/e14f3003-0783-4027-b96c-c62e5e2e1b5a
+
+
+
 ## III. Thiết bị
 
 - ZUBoard 1CG mã XCZU1CG-1SBVA484E.

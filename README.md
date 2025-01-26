@@ -127,5 +127,5 @@ Module **top** kết nối các khối chức năng lại theo sơ đồ trên.
 
 ## VI. Tham khảo
 
-1. [HC595 Datasheet](./refs/SN54HC595.pdf)
+1. [HC595 Datasheet](./refs/SN54HC595.PDF)
 2. [FPGA_2_ShiftReg](https://github.com/jjcarrier/FPGA_2_ShiftReg)

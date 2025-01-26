@@ -89,6 +89,7 @@ Chương trình gồm 4 khối chức năng chính:
 
 - Module này nhằm tạo 1 xung kích hoạt khối hc595_driver mỗi 100ms. Xung xuất hiện sau cạnh lên của clk 10 Hz khoảng 10 us, kéo dài 5 us.
 - [Testbench code](./tb/clk_divider_and_eninput_pulse_tb.v)
+  
 - Waveform:
 
 ![gen_eninput_pulse_tb](./images/gen_eninput_pulse_tb.png)
@@ -109,6 +110,12 @@ Khối này được thiết kế gồm 3 FSM lồng nhau:
 - **sub FSM 2**: FSM con của trạng thái **LATCH** gồm 3 trạng thái: **TGL_ON**, **TGL_OFF**, **CHECK**.
 
 ![fsm_hc595_driver](./images/fsm_hc595_driver.png)
+
+- [Testbench code](./tb/hc595_driver_tb.v)
+  
+- Waveform:
+
+![hc595_driver_tb](./images/hc595_driver_tb.png)
 
 ### [7. top](./src/top.v)
 

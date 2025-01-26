@@ -120,4 +120,4 @@ Module **top** kết nối các khối chức năng lại theo sơ đồ trên.
 
 ## VI. Tham khảo
 
-![FPGA_2_ShiftReg](https://github.com/jjcarrier/FPGA_2_ShiftReg)
+[FPGA_2_ShiftReg](https://github.com/jjcarrier/FPGA_2_ShiftReg)

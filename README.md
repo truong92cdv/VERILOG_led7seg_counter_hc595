@@ -71,4 +71,28 @@ Chương trình gồm 4 khối chức năng chính:
 
 ![schematic_top](./images/schematic_top.png)
 
+### [1. clk_divider](./src/clk_divider.v)
+
+- Tạo clk 10 Hz (100 ms) từ clk 100 MHz của ZUBoard.
+
+### [2. digits](./src/digits.v)
+
+- Với mỗi cạnh lên xung clk đầu vào 10 Hz, ta tăng **dig_0** lên 1, khi tăng đến 9 thì set lại thành 0.
+- Khi **dig_0 == 9**, set **dig_0 == 0**, **dig_1 = 1**.
+- Khi **dig_0 == 9** và **dig_1 == 9**, set **dig_0 = 0**, **dig_1 = 0**, **dig_2 = 1**.
+- Khi **dig_0 == 9** và **dig_1 == 9** và **dig_2 == 9**, set **dig_0 = 0**, **dig_1 = 0**, **dig_2 = 0**, **dig_3 = 1**.
+- Khi **dig_0 == 9** và **dig_1 == 9** và **dig_2 == 9**, set **dig_0 = 9**, set cả 4 chữ số về 0.
+
+### [3. bcd_to_led7seg](./src/bcd_to_led7seg.v)
+
+Led 7 đoạn tôi dùng thuộc loại common anode, đầu vào là 1 chữ số BCD 4 bit, đầu ra là 8 bit mã hóa 8 đoạn led từ DP, G, F, E, D, C, B, A.
+
+### [4. gen_eninput_pulse](./src/gen_eninput_pulse.v)
+
+Module này nhằm tạo 1 xung kích hoạt khối hc595_driver mỗi 100ms. Xung xuất hiện sau cạnh lên của clk 10 Hz khoảng 10 us, kéo dài 5 us.
+
+![gen_eninput_pulse](./images/gen_eninput_pulse.png)
+
+### [5. hc595_driver](./src/hc595_driver.v)
+
 

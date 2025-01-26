@@ -78,10 +78,10 @@ Chương trình gồm 4 khối chức năng chính:
 ### [2. digits](./src/digits.v)
 
 - Với mỗi cạnh lên xung clk đầu vào 10 Hz, ta tăng **dig_0** lên 1.
-- Khi **dig_0 == 9**; set **dig_0 == 0**, **dig_1 = 1**.
+- Khi **dig_0 == 9**; set **dig_0 = 0**, **dig_1 = 1**.
 - Khi **dig_0 == 9**, **dig_1 == 9**; set **dig_0 = 0**, **dig_1 = 0**, **dig_2 = 1**.
-- Khi **dig_0 == 9**, **dig_1 == 9** và **dig_2 == 9**, set **dig_0 = 0**, **dig_1 = 0**, **dig_2 = 0**, **dig_3 = 1**.
-- Khi **dig_0 == 9**, **dig_1 == 9**, **dig_2 == 9** và **dig_3 == 9**, reset cả 4 chữ số về 0.
+- Khi **dig_0 == 9**, **dig_1 == 9** và **dig_2 == 9**; set **dig_0 = 0**, **dig_1 = 0**, **dig_2 = 0**, **dig_3 = 1**.
+- Khi **dig_0 == 9**, **dig_1 == 9**, **dig_2 == 9** và **dig_3 == 9**; reset cả 4 chữ số về 0.
 
 ### [3. bcd_to_led7seg](./src/bcd_to_led7seg.v)
 

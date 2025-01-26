@@ -1,6 +1,4 @@
-... developmenting ... not yet done ...
-
-[Vietnamese version here!](./README_VI.md)
+[English version here!](./README.md)
 
 # Led7seg Counter with HC595 
 

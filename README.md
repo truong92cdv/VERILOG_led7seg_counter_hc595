@@ -88,7 +88,7 @@ Chương trình gồm 5 khối chức năng chính:
 ### [4. gen_eninput_pulse](./src/gen_eninput_pulse.v)
 
 - Module này nhằm tạo 1 xung kích hoạt khối hc595_driver mỗi 100ms. Xung xuất hiện sau cạnh lên của clk 10 Hz khoảng 10 us, kéo dài 5 us.
-- [Testbench code](./tb/clk_divider_and_eninput_pulse_tb.v)
+- [Testbench code](./tb/gen_eninput_pulse_tb.v)
   
 - Waveform:
 

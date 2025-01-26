@@ -85,19 +85,19 @@ Chương trình gồm 4 khối chức năng chính:
 
 ### [3. bcd_to_led7seg](./src/bcd_to_led7seg.v)
 
-Led 7 đoạn tôi dùng thuộc loại common anode, đầu vào là 1 chữ số BCD 4 bit, đầu ra là 8 bit mã hóa 8 đoạn led từ DP, G, F, E, D, C, B, A.
+- Led 7 đoạn tôi dùng thuộc loại common anode, đầu vào là 1 chữ số BCD 4 bit, đầu ra là 8 bit mã hóa 8 đoạn led từ DP, G, F, E, D, C, B, A.
 
 ### [4. gen_eninput_pulse](./src/gen_eninput_pulse.v)
 
-Module này nhằm tạo 1 xung kích hoạt khối hc595_driver mỗi 100ms. Xung xuất hiện sau cạnh lên của clk 10 Hz khoảng 10 us, kéo dài 5 us.
+- Module này nhằm tạo 1 xung kích hoạt khối hc595_driver mỗi 100ms. Xung xuất hiện sau cạnh lên của clk 10 Hz khoảng 10 us, kéo dài 5 us.
 
 ![gen_eninput_pulse_tb](./images/gen_eninput_pulse_tb.png)
 
 ### [5. gen_pulse](./src/gen_pulse.v)
 
-Khối **gen_pulse** là 1 module con của khối hc595_driver. Mục đích tạo xung đầu ra có thể tùy chính **setup_time** và **pulse_duration**. Xung được kích hoạt khi bật cờ **toggle**. Ta sẽ tạo 2 bản sao của khối này dành cho xung **SRCLK** và **RCLK**.
+- Khối **gen_pulse** là 1 module con của khối hc595_driver. Mục đích tạo xung đầu ra có thể tùy chính **setup_time** và **pulse_duration**. Xung được kích hoạt khi bật cờ **toggle**. Ta sẽ tạo 2 bản sao của khối này dành cho xung **SRCLK** và **RCLK**.
 
-Ta thiết kế 1 FSM có 4 trạng thái:
+- Ta thiết kế 1 FSM có 4 trạng thái:
 
 ![fsm_gen_pulse](./images/fsm_gen_pulse.png)
 

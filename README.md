@@ -16,12 +16,12 @@ https://github.com/user-attachments/assets/e14f3003-0783-4027-b96c-c62e5e2e1b5a
 
 ## III. Thiết bị
 
-- ZUBoard 1CG mã XCZU1CG-1SBVA484E.
+- ZUBoard 1CG mã **XCZU1CG-1SBVA484E**.
 - Led7seg 4 số có tích hợp 4 ic HC595.
 - 3 đường dây tín hiệu SRCLK, RCLK và SER; dây VCC +5V; dây GND.
 
 Trên thị trường có 4 loại module led7seg 4 số thông dụng, tương ứng mỗi loại thì giao tiếp với Verilog cũng khác nhau:
-1. Led 7 đoạn đơn thuần (common cathode hoặc common anode). Cần đến 12 chân giao tiếp.
+1. Led 7 đoạn đơn thuần. Cần đến 12 chân giao tiếp.
    
 ![4led7seg_no_ic](./images/4led7seg_no_ic.jpg)
 
@@ -29,7 +29,7 @@ Trên thị trường có 4 loại module led7seg 4 số thông dụng, tương 
    
 ![4led7seg_tm1637](./images/4led7seg_tm1637.jpg)
 
-3. Led 7 đoạn tích hợp 2 ic HC595. 1 ic điều khiển các đoạn led A->DP, 1 ic để chọn led. Dùng 3 chân giao tiếp SRCLK, RCLK, SER.
+3. Led 7 đoạn tích hợp 2 ic HC595. Trong đó, 1 ic điều khiển các đoạn led A -> DP, 1 ic để chọn led. Dùng 3 chân giao tiếp SRCLK, RCLK, SER.
    
 ![4led7seg_2hc595](./images/4led7seg_2hc595.jpg)
 
@@ -60,7 +60,7 @@ Như vậy để điều khiển 4 led, ta cần gửi cả 32 bit dữ liệu r
 
 ## V. Thiết kế các khối chức năng
 
-Chương trình gồm 4 khối chức năng chính:
+Chương trình gồm 5 khối chức năng chính:
 1. Khối **clk_divider**: chia clk 100 MHz của ZUBoard thành clk 10 Hz (100 ms).
 2. Khối **digits**: nhận clk đầu vào 10 MHz, đầu ra là 4 chữ số **dig_0**, **dig_1**, **dig_2**, **dig_3** dưới dạng số thập phân. Các số này đếm từ 0 -> 9999, tăng lên mỗi 100 ms.
 3. Khối **bcd_to_led7seg**: gồm 4 bản sao. Mỗi khối nhận đầu vào là 1 chữ số từ khối **digits**, chuyển nó sang dạng mã hóa led 7 đoạn.
@@ -83,7 +83,7 @@ Chương trình gồm 4 khối chức năng chính:
 
 ### [3. bcd_to_led7seg](./src/bcd_to_led7seg.v)
 
-- Led 7 đoạn tôi dùng thuộc loại common anode, đầu vào là 1 chữ số BCD 4 bit, đầu ra là 8 bit mã hóa 8 đoạn led từ DP, G, F, E, D, C, B, A.
+- Led 7 đoạn trong bài thuộc loại common anode, đầu vào là 1 chữ số BCD 4 bit, đầu ra là 8 bit mã hóa 8 đoạn led từ DP, G, F, E, D, C, B, A.
 
 ### [4. gen_eninput_pulse](./src/gen_eninput_pulse.v)
 
@@ -92,7 +92,7 @@ Chương trình gồm 4 khối chức năng chính:
   
 - Waveform:
 
-![gen_eninput_pulse_tb](./images/gen_eninput_pulse_tb.png)
+![waveform_gen_eninput_pulse_tb](./images/waveform_gen_eninput_pulse_tb.png)
 
 ### [5. gen_pulse](./src/gen_pulse.v)
 
@@ -115,7 +115,7 @@ Khối này được thiết kế gồm 3 FSM lồng nhau:
   
 - Waveform:
 
-![hc595_driver_tb](./images/hc595_driver_tb.png)
+![waveform_hc595_driver_tb](./images/waveform_hc595_driver_tb.png)
 
 ### [7. top](./src/top.v)
 

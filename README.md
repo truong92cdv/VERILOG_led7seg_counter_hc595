@@ -91,7 +91,7 @@ Led 7 đoạn tôi dùng thuộc loại common anode, đầu vào là 1 chữ s�
 
 Module này nhằm tạo 1 xung kích hoạt khối hc595_driver mỗi 100ms. Xung xuất hiện sau cạnh lên của clk 10 Hz khoảng 10 us, kéo dài 5 us.
 
-![gen_eninput_pulse](./images/gen_eninput_pulse.png)
+![gen_eninput_pulse_tb](./images/gen_eninput_pulse_tb.png)
 
 ### [5. hc595_driver](./src/hc595_driver.v)
 

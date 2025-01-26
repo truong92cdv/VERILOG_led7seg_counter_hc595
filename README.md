@@ -93,6 +93,14 @@ Module này nhằm tạo 1 xung kích hoạt khối hc595_driver mỗi 100ms. Xu
 
 ![gen_eninput_pulse_tb](./images/gen_eninput_pulse_tb.png)
 
-### [5. hc595_driver](./src/hc595_driver.v)
+### [5. gen_pulse](./src/gen_pulse.v)
+
+Khối **gen_pulse** là 1 module con của khối hc595_driver. Mục đích tạo xung đầu ra có thể tùy chính **setup_time** và **pulse_duration**. Xung được kích hoạt khi bật cờ **toggle**. Ta sẽ tạo 2 bản sao của khối này dành cho xung **SRCLK** và **RCLK**.
+
+Ta thiết kế 1 FSM có 4 trạng thái:
+
+![fsm_gen_pulse](./images/fsm_gen_pulse.png)
+
+### [6. hc595_driver](./src/hc595_driver.v)
 
 

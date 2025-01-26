@@ -55,7 +55,7 @@ Sơ đồ cấu tạo của HC595 như sau:
 
 1 khung truyền dữ liệu diễn ra như sau:
 
-![waveform_hc595](./images/waveform_hc595.png)
+![waveform_hc595](./images/waveform_hc595_1frame.png)
 
 Module 4 led 7 đoạn của chúng ta gồm 4 ic hc595 xếp tầng theo sơ đồ sau:
 

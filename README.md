@@ -95,7 +95,7 @@ Chương trình gồm 4 khối chức năng chính:
 
 ### [5. gen_pulse](./src/gen_pulse.v)
 
-- Khối **gen_pulse** là 1 module con của khối hc595_driver. Mục đích tạo xung đầu ra có thể tùy chính **setup_time** và **pulse_duration**. Xung được kích hoạt khi bật cờ **toggle**. Ta sẽ tạo 2 bản sao của khối này dành cho xung **SRCLK** và **RCLK**.
+- Khối **gen_pulse** là 1 module con của khối hc595_driver. Mục đích tạo xung đầu ra có thể tùy chính **setup_time** và **pulse_duration**. Xung được kích hoạt khi bật cờ **toggle**. Ta sẽ tạo 2 bản sao của khối này dành cho xung **SRCLK** và **RCLK**. thời gian **setup_time** và **pulse_duration** mặc định là 2 us.
 
 - Ta thiết kế 1 FSM có 4 trạng thái:
 

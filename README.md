@@ -110,4 +110,14 @@ Khối này được thiết kế gồm 3 FSM lồng nhau:
 
 ![fsm_hc595_driver](./images/fsm_hc595_driver.png)
 
+### [7. top](./src/top.v)
 
+Module **top** kết nối các khối chức năng lại theo sơ đồ trên.
+
+![schematic_1](./images/schematic_1.png)
+
+![schematic_top](./images/schematic_top.png)
+
+## VI. Tham khảo
+
+![FPGA_2_ShiftReg](https://github.com/jjcarrier/FPGA_2_ShiftReg)

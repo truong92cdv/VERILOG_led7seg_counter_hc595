@@ -42,7 +42,8 @@ Trong bài này tôi dùng loại thứ 4.
 
 ## IV. HC595
 
-HC595 là 1 ic thanh ghi dịch 8 bit. Đọc thêm về hc595 tại đây [HC595](https://dientutuonglai.com/tim-hieu-74hc595.html)
+HC595 là 1 ic thanh ghi dịch 8 bit. Đọc thêm về hc595 tại đây [HC595 basic](https://lastminuteengineers.com/74hc595-shift-register-arduino-tutorial/).
+Tham khảo [HC595 Datasheet](./refs/SN54HC595.PDF).
 
 Dữ liệu được gửi đến hc595 theo từng bit tại mỗi cạnh lên xung clk. Khi đã gửi đủ 8 bit, kéo chân RCLK (hoặc ST_CP) lên mức cao để chốt dữ liệu đến đầu ra Q0 -> Q7 (hoặc QA -> QH).
 

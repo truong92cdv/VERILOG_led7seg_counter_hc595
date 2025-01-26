@@ -53,6 +53,10 @@ Sơ đồ cấu tạo của HC595 như sau:
 
 ![schematic_hc595](./images/schematic_hc595.webp)
 
+1 khung truyền dữ liệu diễn ra như sau:
+
+![waveform_hc595](./images/waveform_hc595.png)
+
 Module 4 led 7 đoạn của chúng ta gồm 4 ic hc595 xếp tầng theo sơ đồ sau:
 
 ![schematic_4hc595_daisy_chained](./images/schematic_4hc595_daisy_chained.jpg)
@@ -111,6 +115,10 @@ Khối này được thiết kế gồm 3 FSM lồng nhau:
 - **sub FSM 2**: FSM con của trạng thái **LATCH** gồm 3 trạng thái: **TGL_ON**, **TGL_OFF**, **CHECK**.
 
 ![fsm_hc595_driver](./images/fsm_hc595_driver.png)
+
+Các trạng thái tương ứng với waveform như sau:
+
+![waveform_hc595_fsm](./images/waveform_hc595_fsm.png)
 
 - [Testbench code](./tb/hc595_driver_tb.v)
   

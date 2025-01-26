@@ -103,7 +103,7 @@ Chương trình gồm 4 khối chức năng chính:
 
 ### [6. hc595_driver](./src/hc595_driver.v)
 
-Khối này được thiết kế gồm 2 FSM lồng nhau (thật ra là 3 FSM):
+Khối này được thiết kế gồm 3 FSM lồng nhau:
 - **main FSM** gồm 3 trạng thái: **IDLE**, **SHIFT**, **LATCH**. Khi có tín hiệu en_input, chuyển trạng thái từ **IDLE** -> **SHIFT**, tiến hành shift từng bit dữ liệu (32 bit). Sau khi hoàn thành shift 32 bit, chuyển sang trạng thái **LATCH**, tạo xung **RCLK** để chốt dữ liệu.
 - **sub FSM 1**: FSM con của trạng thái **SHIFT** gồm 4 trạng thái: **PUSH**, **TGL_ON**, **TGL_OFF**, **CHECK**.
 - **sub FSM 2**: FSM con của trạng thái **LATCH** gồm 3 trạng thái: **TGL_ON**, **TGL_OFF**, **CHECK**.

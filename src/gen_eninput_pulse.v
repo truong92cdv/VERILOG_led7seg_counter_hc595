@@ -1,5 +1,5 @@
 module gen_eninput_pulse #(
-	parameter   input_clk_freq  = 100_000_000,      // Input clock 100 MHz
+    parameter   input_clk_freq  = 100_000_000,      // Input clock 100 MHz
     parameter   output_clk_freq = 10                // Output clock 10 Hz = 100ms
 )(
     input       clk,
@@ -15,7 +15,7 @@ module gen_eninput_pulse #(
             count <= count + 1;
             if (count == 1000)          // 10 us
                 en_input_r <= 1;
-            else if (count == 500)      //  5 us
+	    else if (count == 1500)      //  5 us
                 en_input_r <= 0;
         end else begin
             count <= 0;

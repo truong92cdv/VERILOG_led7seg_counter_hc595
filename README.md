@@ -14,7 +14,7 @@ Design a 4-digit 7-segment counter (0-9999). Verilog communication through the s
 
 https://github.com/user-attachments/assets/e14f3003-0783-4027-b96c-c62e5e2e1b5a
 
-## III. Equipments
+## III. Hardware
 
 - ZUBoard 1CG code **XCZU1CG-1SBVA484E**.
 - **Led7seg** 4-digit display with 4 integrated **HC595** ICs.
